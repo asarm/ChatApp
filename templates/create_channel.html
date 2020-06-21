@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Create{%endblock%}
+
+{% block content %}
+    <div class="form-card" id="form">
+    <form action="{{url_for('create_channel')}}" method="POST" style="padding: 10%;" id="loginForm">
+      <div class="form-group">
+        <div style="text-align: center;">
+            <input type="text" class="form-control" id="username" placeholder="Channel Name" name="channel_name" autofocus>
+        </div>
+      </div>
+        <button class="btn btn-primary btn-block">Enter</button>
+    </form>
+</div>
+
+    <div style="text-align: center;">
+        <h2>Active Channel List</h2>
+        {% for channel in channels%}
+            <ul>
+                <button class="btn btn-secondary">{{ channel }}</button>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

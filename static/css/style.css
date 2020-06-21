@@ -1,0 +1,31 @@
+body{
+    background-color: whitesmoke;
+}
+.form-card{
+    width :60%;
+    height: 40%;
+    padding: 10%;
+    margin: 0 auto;
+    margin-top:1%;
+    margin-bottom:5%;
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.form-group{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+}
+#home-button:hover{
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.row{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}

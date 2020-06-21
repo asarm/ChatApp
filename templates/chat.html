@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Chat{%endblock%}
+
+{% block content %}
+    <div style="text-align: center;">
+    <div id="chat-box" class="list-group">
+
+        <textarea readonly id="chat" cols="100" rows="20">
+            {%- if messages -%}
+                {%- for message in messages -%}
+                    <{{ message[0] }}> - [{{ message[1] }}]: {{ message [2] }} {{'\n'}}
+                {%- endfor -%}
+                {{ '----- These are old messages -----' }}{{- '\n' -}}
+            {%- endif -%}
+        </textarea>
+
+
+        <div class="input-group mb-3" style="text-align: center;margin: 0 auto;justify-content: center;">
+             <input id="message" type="text" size="60" placeholder="message">
+             <button class="btn btn-success" id="send" style="margin-left: 1%">Send</button>
+        </div>
+    </div>
+    </div>
+{% endblock %}

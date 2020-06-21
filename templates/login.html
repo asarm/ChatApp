@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block title %}Login{%endblock%}
+
+{% block content %}
+{% if not username %}
+    <div class="form-card" id="form">
+    <form action="{{url_for('login')}}" method="post" style="padding: 10%;" id="loginForm">
+      <div class="form-group">
+        <div style="text-align: center;">
+            <input type="text" class="form-control" id="username" placeholder="Choose An Username" name="username" autofocus>
+        </div>
+      </div>
+        <button class="btn btn-primary btn-block">Enter</button>
+    </form>
+</div>
+{% else %}
+    <div id="DisplayName">
+        <p id="user-data">Username:{{username}}</p>
+    </div>
+
+{% endif %}
+{% endblock %}
